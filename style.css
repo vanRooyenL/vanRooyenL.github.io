@@ -32,3 +32,19 @@ li{margin:8px 0}
   .profile-img{width:96px;height:96px}
   .container{padding:16px;margin:18px}
 }
+
+/* Additional initial layout & print-friendly rules */
+.section h2{font-size:1.12rem;margin-bottom:10px}
+.section.work-history h3{color:#06202a;margin-bottom:6px}
+.section.work-history p{color:var(--muted);margin:0 0 12px}
+.section.skills ul{columns:2;column-gap:36px}
+
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+
+@media print{
+  body{background:#fff;color:#000}
+  .profile-img{display:none}
+  .section{box-shadow:none;background:transparent}
+  .section.skills ul{columns:1}
+}
